@@ -17,5 +17,5 @@ jobs:
         ACTION_NAME: hanam1ni
         OWNER: hanam1ni
         REPO_NAME: publish-wiki-action
-        MD_FOLDER: wiki
+        MD_FOLDER: .github/wiki
     
