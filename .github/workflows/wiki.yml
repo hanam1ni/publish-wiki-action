@@ -10,12 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: Decathlon/wiki-page-creator-action@v2.0.0
+    # - uses: Decathlon/wiki-page-creator-action@v2.0.0
+    #   env:
+    #     GH_PAT: ${{ secrets.GH_PAT }}
+    #     ACTION_MAIL: immicky.a@gmail.com 
+    #     ACTION_NAME: hanam1ni
+    #     OWNER: hanam1ni
+    #     REPO_NAME: publish-wiki-action
+    #     MD_FOLDER: .github/wiki
+    - uses: SwiftDocOrg/github-wiki-publish-action@v1
+      with:
+        path: .github/wiki
       env:
-        GH_PAT: ${{ secrets.GH_PAT }}
-        ACTION_MAIL: immicky.a@gmail.com 
-        ACTION_NAME: hanam1ni
-        OWNER: hanam1ni
-        REPO_NAME: publish-wiki-action
-        MD_FOLDER: .github/wiki
+        GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PAT }}
     
